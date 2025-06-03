@@ -1,0 +1,341 @@
+/* CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: hsl(210, 60%, 98%);
+  color: hsl(224, 21%, 14%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Container */
+.container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 730px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(73, 97, 168, 0.05);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+
+.notification-count {
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.mark-all-read {
+  background: none;
+  border: none;
+  color: hsl(219, 12%, 42%);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.mark-all-read:hover,
+.mark-all-read:focus {
+  color: hsl(219, 85%, 26%);
+  outline: none;
+}
+
+/* Notifications List */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Individual Notification */
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.notification:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+
+.notification.unread {
+  background-color: hsl(210, 60%, 98%);
+}
+
+.notification.unread:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+
+/* Avatar */
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Notification Content */
+.notification-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.notification-text {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.name:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.post-title {
+  font-weight: 800;
+  color: hsl(219, 12%, 42%);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.post-title:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.group-name {
+  font-weight: 800;
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.group-name:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.unread-dot {
+  width: 8px;
+  height: 8px;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+
+.timestamp {
+  color: hsl(219, 12%, 42%);
+  font-size: 1rem;
+  margin-top: 0.125rem;
+}
+
+/* Private Message */
+.private-message {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(205, 33%, 90%);
+  border-radius: 5px;
+  color: hsl(219, 12%, 42%);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.private-message:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+
+/* Picture Thumbnail */
+.picture-thumbnail {
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.picture-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+  color: hsl(219, 12%, 42%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.attribution a:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    justify-content: flex-start;
+  }
+  
+  .container {
+    border-radius: 0;
+    padding: 1.5rem 1rem;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+  
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .notification {
+    padding: 1rem 0.5rem;
+  }
+  
+  .notification-text {
+    font-size: 0.95rem;
+  }
+  
+  .timestamp {
+    font-size: 0.95rem;
+  }
+  
+  .private-message {
+    margin-top: 0.5rem;
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .header-left {
+    width: 100%;
+  }
+  
+  .mark-all-read {
+    align-self: flex-start;
+  }
+  
+  .notification {
+    gap: 0.75rem;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .picture-thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Focus states for accessibility */
+.notification:focus-within {
+  outline: 2px solid hsl(219, 85%, 26%);
+  outline-offset: 2px;
+}
+
+.name:focus,
+.post-title:focus,
+.group-name:focus {
+  outline: 2px solid hsl(219, 85%, 26%);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.private-message:focus {
+  outline: 2px solid hsl(219, 85%, 26%);
+  outline-offset: 2px;
+}
+
+.picture-thumbnail:focus {
+  outline: 2px solid hsl(219, 85%, 26%);
+  outline-offset: 2px;
+}
+
+/* Animation for notification count changes */
+.notification-count {
+  transition: all 0.3s ease;
+}
+
+.notification-count.updating {
+  transform: scale(1.2);
+}
+
+/* Smooth transitions for unread state changes */
+.notification {
+  transition: background-color 0.3s ease;
+}
+
+.unread-dot {
+  transition: opacity 0.3s ease;
+}
